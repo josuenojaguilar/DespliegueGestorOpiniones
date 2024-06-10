@@ -6,7 +6,7 @@ const api = express.Router();
 
 //RUTAS PRIVADAS (solo usuarios logeados)
 //Middleware
-api.get('/test', [validateJwt], test)
+api.get('/test', test)
 api.post('/createPost', [validateJwt], createPost) //Middleware -> funciones intermedias que sirven para validar.
 api.put('/editPost/:id', [validateJwt], editPost)
 api.get('/getPosts', [validateJwt], getPosts)
